@@ -115,6 +115,8 @@
                 }    
             }
 
+            
+
         </script>
     @if(session('status')) {{-- <- If session key exists --}}
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -174,7 +176,9 @@
                 .catch(function (error) {
                     console.log(error);
                 });
-        }
+            }
+
+            
     </script>
 
     <script>
@@ -189,6 +193,7 @@
     <script src="/sw.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
+
     // Check that service workers are supported
     if ('serviceWorker' in navigator) {
     // Use the window load event to keep the page load performant

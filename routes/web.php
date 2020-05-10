@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','PagesController@index')->name('pages.index');
 Route::get('/about','PagesController@about')->name('pages.about');
 
+Route::get('/profile','ProfileController@index')->name('profile.index');
+Route::put('/profile','ProfileController@update')->name('profile.update');
+
 Route::get('/todos','TodosController@index')->name('todos.index');
 Route::get('/todos/{id}/change-status','TodosController@changestatus')->name('todos.changestatus');
 Route::get('/todos/create','TodosController@create')->name('todos.create');
