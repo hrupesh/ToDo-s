@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="manifest" href="{{ asset('assets/manifest.json') }}">
+    <link rel="manifest" href="{{ secure_asset('assets/manifest.json') }}">
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -15,8 +15,8 @@
     <meta name="msapplication-starturl" content="/">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="icon" type="image/jpg" sizes="300x300" href="{{ asset('assets/Icon-512.png') }}">
-    <link rel="apple-touch-icon" type="image/jpg" sizes="300x300" href="{{ asset('assets/Icon-512.png') }}">
+    <link rel="icon" type="image/jpg" sizes="300x300" href="{{ secure_asset('assets/Icon-512.png') }}">
+    <link rel="apple-touch-icon" type="image/jpg" sizes="300x300" href="{{ secure_asset('assets/Icon-512.png') }}">
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
