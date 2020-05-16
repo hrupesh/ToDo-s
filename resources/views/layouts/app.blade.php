@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="manifest" href="{{ url('assets/manifest.json') }}">
+    <link rel="manifest" href="{{ asset('assets/manifest.json') }}">
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -15,21 +15,21 @@
     <meta name="msapplication-starturl" content="/">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="icon" type="image/jpg" sizes="300x300" href="{{ url('assets/Icon-512.png') }}">
-    <link rel="apple-touch-icon" type="image/jpg" sizes="300x300" href="{{ url('assets/Icon-512.png') }}">
+    <link rel="icon" type="image/jpg" sizes="300x300" href="{{ asset('assets/Icon-512.png') }}">
+    <link rel="apple-touch-icon" type="image/jpg" sizes="300x300" href="{{ asset('assets/Icon-512.png') }}">
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ url('/assets/css/all.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/all.css') }}">
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="{{ url('/assets/css/roboto.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/roboto.css') }}">
     <!-- Bootstrap core CSS -->
-    <link href="{{ url('/assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="{{ url('/assets/css/mdb.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/css/mdb.min.css') }}" rel="stylesheet">
     {{-- <link rel="stylesheet" href="{{asset('css/app.css')}}"> <- bootstrap css --}}
     <title>@yield('title',"ToDo's | Organise Your Tasks")</title>
     <style>
@@ -89,13 +89,13 @@
     </main>
     
     <!-- JQuery -->
-    <script type="text/javascript" src="{{ url('/assets/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/assets/js/jquery.min.js') }}"></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="{{ url('/assets/js/popper.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/assets/js/popper.min.js') }}"></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="{{ url('/assets/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="{{ url('/assets/js/mdb.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/assets/js/mdb.min.js') }}"></script>
     {{-- <script src="{{asset('js/app.js')}}"></script> <- bootstrap and jquery --}}
     
         <script>
@@ -156,14 +156,14 @@
             if(cardclassList.includes('not-completed')){
                 card.classList.remove('not-completed');
                 card.classList.add('completed');
-                t.src = '{{ url('/assets/check.png') }}';
-                var s = new sound("{{ url('assets/notification.ogg') }}");
+                t.src = '{{ asset('/assets/check.png') }}';
+                var s = new sound("{{ asset('assets/notification.ogg') }}");
                 s.play();
             }else{
                 card.classList.remove('completed');
                 card.classList.add('not-completed');
-                t.src = '{{ url('/assets/cross.png') }}';
-                var s = new sound("{{ url('assets/cancel.ogg') }}");
+                t.src = '{{ asset('/assets/cross.png') }}';
+                var s = new sound("{{ asset('assets/cancel.ogg') }}");
                 s.play();
             }
 
