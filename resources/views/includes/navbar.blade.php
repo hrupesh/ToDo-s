@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark secondary-color-dark fixed-top navbar-laravel">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{ url('assets/logo.svg') }}" height="30" alt="mdb logo">
+            <img src="{{ secure_asset('assets/logo.svg') }}" height="30" alt="mdb logo">
         </a>
         <div class="nav-brand theme-btn">
             <label class="switch" >
