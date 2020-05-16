@@ -23,13 +23,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('/assets/css/all.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('/assets/css/all.css') }}">
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="{{ asset('/assets/css/roboto.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('/assets/css/roboto.css') }}">
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset('/assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('/assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="{{ asset('/assets/css/mdb.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('/assets/css/mdb.min.css') }}" rel="stylesheet">
     {{-- <link rel="stylesheet" href="{{asset('css/app.css')}}"> <- bootstrap css --}}
     <title>@yield('title',"ToDo's | Organise Your Tasks")</title>
     <style>
@@ -89,13 +89,13 @@
     </main>
     
     <!-- JQuery -->
-    <script type="text/javascript" src="{{ asset('/assets/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset('/assets/js/jquery.min.js') }}"></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="{{ asset('/assets/js/popper.min.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset('/assets/js/popper.min.js') }}"></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset('/assets/js/bootstrap.min.js') }}"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="{{ asset('/assets/js/mdb.min.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset('/assets/js/mdb.min.js') }}"></script>
     {{-- <script src="{{asset('js/app.js')}}"></script> <- bootstrap and jquery --}}
     
         <script>
@@ -156,14 +156,14 @@
             if(cardclassList.includes('not-completed')){
                 card.classList.remove('not-completed');
                 card.classList.add('completed');
-                t.src = '{{ asset('/assets/check.png') }}';
-                var s = new sound("{{ asset('assets/notification.ogg') }}");
+                t.src = '{{ secure_asset('/assets/check.png') }}';
+                var s = new sound("{{ secure_asset('assets/notification.ogg') }}");
                 s.play();
             }else{
                 card.classList.remove('completed');
                 card.classList.add('not-completed');
-                t.src = '{{ asset('/assets/cross.png') }}';
-                var s = new sound("{{ asset('assets/cancel.ogg') }}");
+                t.src = '{{ secure_asset('/assets/cross.png') }}';
+                var s = new sound("{{ secure_asset('assets/cancel.ogg') }}");
                 s.play();
             }
 
